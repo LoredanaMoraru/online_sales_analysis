@@ -21,3 +21,12 @@ class ProductManager:
         total = sum(p.price * p.quantity for p in self.products)
         print(f"Valoarea totală a inventarului: {total} RON")
         return total
+
+
+def remove_product_by_name(self, name):
+    for p in self.products:
+        if p.name.lower() == name.lower():
+            self.products.remove(p)
+            print(f"Produsul '{name}' a fost eliminat.")
+            return
+    print(f"Produsul '{name}' nu a fost găsit.")
